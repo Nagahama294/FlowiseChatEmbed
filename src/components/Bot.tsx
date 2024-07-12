@@ -460,8 +460,9 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                     />
                   )}
 
-                  // ここから長濱編集
+                  // ここから編集
                   {loading() == false && clearChat}
+                  {message.type === 'apiMessage' && index() === messages().length - 1 && alert('test')}
                   // ここまで
                   
                   {message.type === 'userMessage' && loading() && index() === messages().length - 1 && <LoadingBubble />}
