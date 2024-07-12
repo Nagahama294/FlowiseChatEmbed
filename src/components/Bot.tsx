@@ -454,7 +454,8 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                       fileAnnotations={message.fileAnnotations}
                       apiHost={props.apiHost}
                       backgroundColor={props.botMessage?.backgroundColor}
-                      textColor={props.botMessage?.textColor}
+                      // textColor={props.botMessage?.textColor}
+                      textColor={"00FF00"}
                       showAvatar={props.botMessage?.showAvatar}
                       avatarSrc={props.botMessage?.avatarSrc}
                     />
@@ -462,7 +463,6 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
 
                   // ここから編集
                   {loading() == false && clearChat}
-                  {message.type === 'apiMessage' && index() === messages().length - 1 && alert('test')}
                   // ここまで
                   
                   {message.type === 'userMessage' && loading() && index() === messages().length - 1 && <LoadingBubble />}
