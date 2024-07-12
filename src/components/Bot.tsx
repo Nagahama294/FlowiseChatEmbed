@@ -459,6 +459,11 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                       avatarSrc={props.botMessage?.avatarSrc}
                     />
                   )}
+
+                  // ここから長濱編集
+                  {loading() == false && clearChat}
+                  // ここまで
+                  
                   {message.type === 'userMessage' && loading() && index() === messages().length - 1 && <LoadingBubble />}
                   {message.sourceDocuments && message.sourceDocuments.length && (
                     <div style={{ display: 'flex', 'flex-direction': 'row', width: '100%' }}>
