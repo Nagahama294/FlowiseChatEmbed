@@ -454,8 +454,7 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                       fileAnnotations={message.fileAnnotations}
                       apiHost={props.apiHost}
                       backgroundColor={props.botMessage?.backgroundColor}
-                      // textColor={props.botMessage?.textColor}
-                      textColor={00FF00}
+                      textColor={props.botMessage?.textColor}
                       showAvatar={props.botMessage?.showAvatar}
                       avatarSrc={props.botMessage?.avatarSrc}
                     />
